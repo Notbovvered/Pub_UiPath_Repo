@@ -1,0 +1,189 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Get_Client_Information" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:p="http://schemas.uipath.com/workflow/activities/cv" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Drawing;assembly=System.Drawing" xmlns:uc="clr-namespace:UiPath.CV;assembly=UiPath.CV" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="out_TaxID" Type="OutArgument(x:String)" />
+    <x:Property Name="in_Config" Type="InArgument(scg:Dictionary(x:String, x:Object))" />
+    <x:Property Name="in_VendorWIID" Type="InArgument(x:String)" />
+  </x:Members>
+  <mva:VisualBasic.Settings>
+    <x:Null />
+  </mva:VisualBasic.Settings>
+  <sap:VirtualizedContainerService.HintSize>693,1629</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>Get Client Information_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="44">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>UiPath.CV</x:String>
+      <x:String>UiPath.Vision.OCR</x:String>
+      <x:String>UiPath.OCR.Contracts</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="34">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.CV</AssemblyReference>
+      <AssemblyReference>UiPath.Vision.Core</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Contracts</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="Get Client Information" sap:VirtualizedContainerService.HintSize="673,1569" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="x:Boolean" Name="VendorInformation" />
+      <Variable x:TypeArguments="s:String[]" Name="arrVendorInfo" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:BrowserScope Browser="{x:Null}" BrowserType="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Attach Browser 'chrome.exe  personal work items" sap:VirtualizedContainerService.HintSize="631,1477" sap2010:WorkflowViewState.IdRef="BrowserScope_1" InformativeScreenshot="2b5da195f3e218b743b768f49cc2de72" SearchScope="{x:Null}" Selector="&lt;html app='chrome.exe' title='ACME System 1 - Work Items' /&gt;" TimeoutMS="{x:Null}" UiBrowser="{x:Null}">
+      <ui:BrowserScope.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Get the vendor information" sap:VirtualizedContainerService.HintSize="597,1331" sap2010:WorkflowViewState.IdRef="Sequence_3">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <p:CVScope ApiKey="OR4QShIpmWMw1y2rN0ubBDjFryjMwQyqmbkdn6sTnoXb4f9DkgE/HvZcLoKTRT3u" ContinueOnError="{x:Null}" DelayBefore="{x:Null}" DisplayName="CV Screen Scope Select Vendor Info Detials screen" sap:VirtualizedContainerService.HintSize="555,1239" sap2010:WorkflowViewState.IdRef="CVScope_1" RequiresDefaultValues="True" Server="{x:Null}" TimeoutMS="{x:Null}" Version="V1">
+              <p:CVScope.Body>
+                <ActivityAction x:TypeArguments="x:Object">
+                  <ActivityAction.Argument>
+                    <DelegateInArgument x:TypeArguments="x:Object" Name="CVSessionData" />
+                  </ActivityAction.Argument>
+                  <Sequence DisplayName="Do" sap2010:WorkflowViewState.IdRef="Sequence_2">
+                    <p:CvElementExistsWithDescriptor ContinueOnError="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" Descriptor="[&quot;Target: Image (31,20,161,28)&quot;]" DesignTimeScaleFactor="1" DisplayName="CV Element Exists - Vendor Information" sap:VirtualizedContainerService.HintSize="521,106" sap2010:WorkflowViewState.IdRef="CvElementExistsWithDescriptor_1" InRegion="{x:Null}" InformativeScreenshot="08204b7ddeeee06949e586327d59664b" OutRegion="{x:Null}" Result="{x:Null}" TimeoutMS="{x:Null}" Version="V1">
+                      <p:CvElementExistsWithDescriptor.DesignTimeDescriptor>
+                        <uc:CvDescriptor>
+                          <uc:CvDescriptor.Target>
+                            <uc:CvElementDescriptor DesignTimeArea="31, 20, 161, 28" ElementType="Image" ImageBase64="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" />
+                          </uc:CvDescriptor.Target>
+                        </uc:CvDescriptor>
+                      </p:CvElementExistsWithDescriptor.DesignTimeDescriptor>
+                    </p:CvElementExistsWithDescriptor>
+                    <ui:GetValue Value="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Get Text Vendor Info text" sap:VirtualizedContainerService.HintSize="521,106" sap2010:WorkflowViewState.IdRef="GetValue_1">
+                      <ui:GetValue.Target>
+                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="eee28c5d0560c4e1b5d8119e7b2f865d" Selector="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div' idx='1' tag='DIV' /&gt;">
+                          <ui:Target.TimeoutMS>
+                            <InArgument x:TypeArguments="x:Int32" />
+                          </ui:Target.TimeoutMS>
+                          <ui:Target.WaitForReady>
+                            <InArgument x:TypeArguments="ui:WaitForReady" />
+                          </ui:Target.WaitForReady>
+                        </ui:Target>
+                      </ui:GetValue.Target>
+                    </ui:GetValue>
+                    <If Condition="[VendorInformation.Equals(&quot;Vendor Information&quot;)]" DisplayName="If text is correct then" sap:VirtualizedContainerService.HintSize="621,677" sap2010:WorkflowViewState.IdRef="If_1">
+                      <If.Then>
+                        <Sequence DisplayName="Retreviving Vendor Info" sap:VirtualizedContainerService.HintSize="376,529" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                          <Sequence.Variables>
+                            <Variable x:TypeArguments="ui:GenericValue" Name="VendorInfoText" />
+                          </Sequence.Variables>
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <ui:GetValue Value="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Get Text Vendor Info" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="GetValue_2">
+                            <ui:GetValue.Target>
+                              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="eee28c5d0560c4e1b5d8119e7b2f865d" Selector="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div' idx='1' tag='DIV' /&gt;">
+                                <ui:Target.TimeoutMS>
+                                  <InArgument x:TypeArguments="x:Int32" />
+                                </ui:Target.TimeoutMS>
+                                <ui:Target.WaitForReady>
+                                  <InArgument x:TypeArguments="ui:WaitForReady" />
+                                </ui:Target.WaitForReady>
+                              </ui:Target>
+                            </ui:GetValue.Target>
+                          </ui:GetValue>
+                          <Assign sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="Assign_1">
+                            <Assign.To>
+                              <OutArgument x:TypeArguments="s:String[]">[arrVendorInfo]</OutArgument>
+                            </Assign.To>
+                            <Assign.Value>
+                              <InArgument x:TypeArguments="s:String[]">[VendorInfoText.Split(environment.NewLine)]</InArgument>
+                            </Assign.Value>
+                          </Assign>
+                          <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,91" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Trace" Message="[&quot;Vendor Info Array Length: &quot; + arrVendorInfo.Length.ToString]" />
+                          <Assign sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="Assign_2">
+                            <Assign.To>
+                              <OutArgument x:TypeArguments="x:String">[out_TaxID]</OutArgument>
+                            </Assign.To>
+                            <Assign.Value>
+                              <InArgument x:TypeArguments="x:String">[arrVendorInfo(0).Replace("TaxID: ", "")]</InArgument>
+                            </Assign.Value>
+                          </Assign>
+                        </Sequence>
+                      </If.Then>
+                      <If.Else>
+                        <Throw DisplayName="Throw 'VendorInfo isNothing'" Exception="[new ApplicationException(&quot;Vendor Information not found&quot;)]" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="Throw_1" />
+                      </If.Else>
+                    </If>
+                  </Sequence>
+                </ActivityAction>
+              </p:CVScope.Body>
+              <p:CVScope.DesignTimeCache>
+                <uc:CVCache OcrText="{x:Null}" OcrTexts="{x:Null}" InformativeScreenshot="5eca9c21b9bf51dfd9b4eba712a21263" LogicalPosition="781, 380" Position="781, 380" ScaleFactor="1" ScreenshotGuid="584c6789-0785-433b-a520-0646e1710722" ServerVersion="1">
+                  <uc:CVCache.CvUiElements>
+                    <scg:List x:TypeArguments="uc:CvElementInfo" Capacity="4">
+                      <uc:CvElementInfo Category="Button" Confidence="DesignTime" Region="438, 164, 152, 36" Score="1" />
+                      <uc:CvElementInfo Category="Icon" Confidence="DesignTime" Region="445, 174, 17, 16" Score="1" />
+                      <uc:CvElementInfo Category="InputBox" Confidence="Runtime" Region="26, 0, 617, 214" Score="1" />
+                    </scg:List>
+                  </uc:CVCache.CvUiElements>
+                </uc:CVCache>
+              </p:CVScope.DesignTimeCache>
+              <p:CVScope.OCREngine>
+                <ActivityFunc x:TypeArguments="sd:Image, scg:IEnumerable(scg:KeyValuePair(sd:Rectangle, x:String))" />
+              </p:CVScope.OCREngine>
+              <p:CVScope.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="7bc51d4ab534a5790ba3d6422fcdf2f7" Selector="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div' idx='2' tag='DIV' /&gt;" WaitForReady="INTERACTIVE">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                </ui:Target>
+              </p:CVScope.Target>
+            </p:CVScope>
+          </Sequence>
+        </ActivityAction>
+      </ui:BrowserScope.Body>
+    </ui:BrowserScope>
+  </Sequence>
+</Activity>
