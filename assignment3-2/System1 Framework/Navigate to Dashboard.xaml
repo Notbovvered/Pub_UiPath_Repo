@@ -1,0 +1,190 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Navigate_to_Dashboard" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:p="http://schemas.uipath.com/workflow/activities/cv" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:sd="clr-namespace:System.Drawing;assembly=System.Drawing" xmlns:uc="clr-namespace:UiPath.CV;assembly=UiPath.CV" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="in_Config" Type="InArgument(scg:Dictionary(x:String, x:Object))" />
+    <x:Property Name="in_System1_Browser" Type="InArgument(ui:Browser)" />
+  </x:Members>
+  <mva:VisualBasic.Settings>
+    <x:Null />
+  </mva:VisualBasic.Settings>
+  <sap:VirtualizedContainerService.HintSize>496,635</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>Navigate_to_Dashboard_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>UiPath.CV</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>UiPath.CV</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="Navigate_to_Dashboard" sap:VirtualizedContainerService.HintSize="476,575" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:NavigateTo Browser="{x:Null}" DisplayName="Navigate To" sap:VirtualizedContainerService.HintSize="434,59" sap2010:WorkflowViewState.IdRef="NavigateTo_1" Url="https://acme-test.uipath.com/" />
+    <p:CVScope ContinueOnError="{x:Null}" DelayBefore="{x:Null}" Server="{x:Null}" ApiKey="OR4QShIpmWMw1y2rN0ubBDjFryjMwQyqmbkdn6sTnoXb4f9DkgE/HvZcLoKTRT3u" DisplayName="CV Screen Scope 'Chrome_RenderWidgetHost...'" sap:VirtualizedContainerService.HintSize="434,384" sap2010:WorkflowViewState.IdRef="CVScope_1" Version="V1">
+      <p:CVScope.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="CVSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap2010:WorkflowViewState.IdRef="Sequence_2">
+            <p:CvElementExistsWithDescriptor Descriptor="[&quot;Target: Text 'Dashboard' (457,96,170,26)&quot; +&#xD;&#xA;&quot;Anchor: Text 'ACME System' (454,18,116,17)&quot;]" DesignTimeScaleFactor="1" DisplayName="CV Element Exists - Text" sap:VirtualizedContainerService.HintSize="400,106" sap2010:WorkflowViewState.IdRef="CvElementExistsWithDescriptor_1" InformativeScreenshot="9e3c05ee3a49543c5e8a48cfb705971e" Version="V1">
+              <p:CvElementExistsWithDescriptor.DesignTimeDescriptor>
+                <uc:CvDescriptor>
+                  <uc:CvDescriptor.Anchors>
+                    <x:Array Type="uc:CvElementDescriptor">
+                      <uc:CvElementDescriptor DesignTimeArea="454, 18, 116, 17" ElementType="Text" Text="ACME System" />
+                    </x:Array>
+                  </uc:CvDescriptor.Anchors>
+                  <uc:CvDescriptor.Target>
+                    <uc:CvElementDescriptor DesignTimeArea="457, 96, 170, 26" ElementType="Text" Text="Dashboard" />
+                  </uc:CvDescriptor.Target>
+                </uc:CvDescriptor>
+              </p:CvElementExistsWithDescriptor.DesignTimeDescriptor>
+            </p:CvElementExistsWithDescriptor>
+          </Sequence>
+        </ActivityAction>
+      </p:CVScope.Body>
+      <p:CVScope.DesignTimeCache>
+        <uc:CVCache InformativeScreenshot="de5c58bc39aeb64232a713c67667f5e0" LogicalPosition="2560, 103" OcrText="ACME System 1&#xD;&#xA;Dashboard Home Log Out&#xD;&#xA;Home Dashboard&#xD;&#xA;Welcome, jkhassan95@gmail.com to System 1&#xD;&#xA;[i this is your first time logging in, please make sure to gD to user Options Reset Test Data&#xD;&#xA;User options&#xD;&#xA;B Work Items&#xD;&#xA;@ Accounts&#xD;&#xA;Checks&#xD;&#xA;Vendors&#xD;&#xA;Invoices&#xD;&#xA;Reports&#xD;&#xA;copynght 0 2019 ACME systems" Position="2560, 103" ScaleFactor="1" ScreenshotGuid="1f823038-a33d-4f8f-993b-15f3ebb13f96" ServerVersion="1">
+          <uc:CVCache.CvUiElements>
+            <scg:List x:TypeArguments="uc:CvElementInfo" Capacity="32">
+              <uc:CvElementInfo Category="Button" Confidence="DesignTime" Region="522, 388, 203, 50" Score="1" />
+              <uc:CvElementInfo Category="Button" Confidence="DesignTime" Region="519, 615, 206, 48" Score="1" />
+              <uc:CvElementInfo Category="Button" Confidence="DesignTime" Region="522, 503, 203, 48" Score="1" />
+              <uc:CvElementInfo Category="Button" Confidence="DesignTime" Region="520, 558, 208, 49" Score="1" />
+              <uc:CvElementInfo Category="Button" Confidence="DesignTime" Region="520, 445, 207, 49" Score="1" />
+              <uc:CvElementInfo Category="Button" Confidence="DesignTime" Region="524, 331, 203, 49" Score="1" />
+              <uc:CvElementInfo Category="Button" Confidence="DesignTime" Region="522, 670, 205, 47" Score="1" />
+              <uc:CvElementInfo Category="Icon" Confidence="DesignTime" Region="560, 346, 19, 20" Score="1" />
+              <uc:CvElementInfo Category="Icon" Confidence="DesignTime" Region="579, 515, 24, 20" Score="1" />
+              <uc:CvElementInfo Category="Icon" Confidence="DesignTime" Region="563, 402, 23, 20" Score="1" />
+              <uc:CvElementInfo Category="InputBox" Confidence="DesignTime" Region="873, 157, 712, 39" Score="1" />
+              <uc:CvElementInfo Category="Icon" Confidence="Runtime" Region="1474, 14, 46, 21" Score="1" />
+              <uc:CvElementInfo Category="Icon" Confidence="Runtime" Region="580, 574, 18, 18" Score="1" />
+              <uc:CvElementInfo Category="Icon" Confidence="Runtime" Region="577, 628, 20, 20" Score="1" />
+              <uc:CvElementInfo Category="Icon" Confidence="Runtime" Region="1548, 15, 54, 21" Score="1" />
+              <uc:CvElementInfo Category="ArrowButton" Confidence="Runtime" Region="1475, 14, 44, 22" Score="1" />
+              <uc:CvElementInfo Category="ArrowButton" Confidence="Runtime" Region="575, 13, 12, 22" Score="1" />
+              <uc:CvElementInfo Category="ArrowButton" Confidence="Runtime" Region="1546, 15, 57, 20" Score="1" />
+              <uc:CvElementInfo Category="Button" Confidence="Runtime" Region="1475, 14, 44, 21" Score="1" />
+              <uc:CvElementInfo Category="InputBox" Confidence="Runtime" Region="454, 158, 769, 38" Score="1" />
+              <uc:CvElementInfo Category="InputBox" Confidence="Runtime" Region="1476, 15, 44, 21" Score="1" />
+              <uc:CvElementInfo Category="ArrowButton" Confidence="Runtime" Region="450, 158, 232, 37" Score="1" />
+            </scg:List>
+          </uc:CVCache.CvUiElements>
+          <uc:CVCache.OcrTexts>
+            <scg:List x:TypeArguments="uc:OcrTextInfo" Capacity="64">
+              <uc:OcrTextInfo Region="454, 18, 51, 13" Text="ACME" />
+              <uc:OcrTextInfo Region="512, 18, 58, 17" Text="System" />
+              <uc:OcrTextInfo Region="578, 18, 5, 13" Text="1" />
+              <uc:OcrTextInfo Region="457, 96, 170, 26" Text="Dashboard" />
+              <uc:OcrTextInfo Region="1478, 20, 36, 10" Text="Home" />
+              <uc:OcrTextInfo Region="1545, 20, 22, 13" Text="Log" />
+              <uc:OcrTextInfo Region="1572, 20, 22, 10" Text="Out" />
+              <uc:OcrTextInfo Region="470, 172, 36, 10" Text="Home" />
+              <uc:OcrTextInfo Region="529, 172, 67, 10" Text="Dashboard" />
+              <uc:OcrTextInfo Region="525, 261, 155, 31" Text="Welcome," />
+              <uc:OcrTextInfo Region="692, 261, 406, 35" Text="jkhassan95@gmail.com" />
+              <uc:OcrTextInfo Region="1112, 262, 27, 25" Text="to" />
+              <uc:OcrTextInfo Region="1153, 261, 115, 33" Text="System" />
+              <uc:OcrTextInfo Region="1285, 261, 9, 26" Text="1" />
+              <uc:OcrTextInfo Region="525, 309, 8, 10" Text="[i" />
+              <uc:OcrTextInfo Region="536, 309, 21, 10" Text="this" />
+              <uc:OcrTextInfo Region="562, 309, 9, 10" Text="is" />
+              <uc:OcrTextInfo Region="576, 311, 27, 11" Text="your" />
+              <uc:OcrTextInfo Region="607, 309, 22, 10" Text="first" />
+              <uc:OcrTextInfo Region="633, 309, 26, 10" Text="time" />
+              <uc:OcrTextInfo Region="664, 309, 43, 13" Text="logging" />
+              <uc:OcrTextInfo Region="713, 309, 13, 12" Text="in," />
+              <uc:OcrTextInfo Region="732, 309, 40, 13" Text="please" />
+              <uc:OcrTextInfo Region="777, 309, 33, 10" Text="make" />
+              <uc:OcrTextInfo Region="815, 311, 26, 8" Text="sure" />
+              <uc:OcrTextInfo Region="846, 309, 10, 10" Text="to" />
+              <uc:OcrTextInfo Region="862, 311, 14, 11" Text="gD" />
+              <uc:OcrTextInfo Region="881, 309, 10, 10" Text="to" />
+              <uc:OcrTextInfo Region="897, 309, 29, 10" Text="user" />
+              <uc:OcrTextInfo Region="930, 309, 47, 13" Text="Options" />
+              <uc:OcrTextInfo Region="1000, 309, 35, 10" Text="Reset" />
+              <uc:OcrTextInfo Region="1039, 309, 25, 10" Text="Test" />
+              <uc:OcrTextInfo Region="1069, 309, 28, 10" Text="Data" />
+              <uc:OcrTextInfo Region="585, 350, 36, 13" Text="User" />
+              <uc:OcrTextInfo Region="627, 350, 56, 17" Text="options" />
+              <uc:OcrTextInfo Region="567, 405, 19, 14" Text="B" />
+              <uc:OcrTextInfo Region="591, 406, 41, 13" Text="Work" />
+              <uc:OcrTextInfo Region="639, 406, 42, 13" Text="Items" />
+              <uc:OcrTextInfo Region="575, 462, 19, 13" Text="@" />
+              <uc:OcrTextInfo Region="600, 462, 73, 13" Text="Accounts" />
+              <uc:OcrTextInfo Region="607, 518, 59, 13" Text="Checks" />
+              <uc:OcrTextInfo Region="603, 574, 65, 13" Text="Vendors" />
+              <uc:OcrTextInfo Region="603, 630, 64, 13" Text="Invoices" />
+              <uc:OcrTextInfo Region="606, 686, 60, 17" Text="Reports" />
+              <uc:OcrTextInfo Region="455, 812, 59, 13" Text="copynght" />
+              <uc:OcrTextInfo Region="518, 812, 10, 10" Text="0" />
+              <uc:OcrTextInfo Region="533, 812, 29, 10" Text="2019" />
+              <uc:OcrTextInfo Region="566, 812, 40, 10" Text="ACME" />
+              <uc:OcrTextInfo Region="611, 812, 53, 13" Text="systems" />
+            </scg:List>
+          </uc:CVCache.OcrTexts>
+        </uc:CVCache>
+      </p:CVScope.DesignTimeCache>
+      <p:CVScope.OCREngine>
+        <ActivityFunc x:TypeArguments="sd:Image, scg:IEnumerable(scg:KeyValuePair(sd:Rectangle, x:String))">
+          <ActivityFunc.Argument>
+            <DelegateInArgument x:TypeArguments="sd:Image" Name="Image" />
+          </ActivityFunc.Argument>
+          <ui:MicrosoftOCR FilterRegion="{x:Null}" Language="{x:Null}" Output="{x:Null}" Scale="{x:Null}" Text="{x:Null}" ComputeSkewAngle="False" ExtractWords="True" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="MicrosoftOCR_1" Image="[Image]" Profile="Screen" />
+        </ActivityFunc>
+      </p:CVScope.OCREngine>
+      <p:CVScope.Target>
+        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="7eb180d67ae2b9ab3c4e1e5e1d61ffce" Selector="&lt;wnd app='chrome.exe' cls='Chrome_WidgetWin_1' title='ACME System 1 - Dashboard - Google Chrome' /&gt;&lt;wnd cls='Chrome_RenderWidgetHostHWND' title='Chrome Legacy Window' /&gt;" WaitForReady="INTERACTIVE">
+          <ui:Target.TimeoutMS>
+            <InArgument x:TypeArguments="x:Int32" />
+          </ui:Target.TimeoutMS>
+        </ui:Target>
+      </p:CVScope.Target>
+    </p:CVScope>
+  </Sequence>
+</Activity>
