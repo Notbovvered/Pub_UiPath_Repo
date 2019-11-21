@@ -65,6 +65,10 @@
     </scg:List>
   </TextExpression.ReferencesForImplementation>
   <Sequence DisplayName="Select WI4" sap:VirtualizedContainerService.HintSize="1236,2913" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="x:Boolean" Name="WorkItemLoaded" />
+      <Variable x:TypeArguments="x:String" Name="variable1" />
+    </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
