@@ -7,7 +7,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>693,1629</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>793,1636</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>Get Client Information_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="44">
@@ -60,7 +60,7 @@
       <AssemblyReference>UiPath.OCR.Contracts</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Get Client Information" sap:VirtualizedContainerService.HintSize="673,1569" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Get Client Information" sap:VirtualizedContainerService.HintSize="773,1576" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:Boolean" Name="VendorInformation" />
       <Variable x:TypeArguments="s:String[]" Name="arrVendorInfo" />
@@ -70,26 +70,26 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:BrowserScope Browser="{x:Null}" BrowserType="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Attach Browser 'chrome.exe  personal work items" sap:VirtualizedContainerService.HintSize="631,1477" sap2010:WorkflowViewState.IdRef="BrowserScope_1" InformativeScreenshot="2b5da195f3e218b743b768f49cc2de72" SearchScope="{x:Null}" Selector="&lt;html app='chrome.exe' title='ACME System 1 - Work Items' /&gt;" TimeoutMS="{x:Null}" UiBrowser="{x:Null}">
+    <ui:BrowserScope Browser="{x:Null}" BrowserType="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" DisplayName="Attach Browser 'chrome.exe  personal work items" sap:VirtualizedContainerService.HintSize="731,1484" sap2010:WorkflowViewState.IdRef="BrowserScope_1" InformativeScreenshot="2b5da195f3e218b743b768f49cc2de72" Selector="&lt;html app='chrome.exe' title='ACME System 1 - Work Items' /&gt;">
       <ui:BrowserScope.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Get the vendor information" sap:VirtualizedContainerService.HintSize="597,1331" sap2010:WorkflowViewState.IdRef="Sequence_3">
+          <Sequence DisplayName="Get the vendor information" sap:VirtualizedContainerService.HintSize="697,1338" sap2010:WorkflowViewState.IdRef="Sequence_3">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <p:CVScope ApiKey="OR4QShIpmWMw1y2rN0ubBDjFryjMwQyqmbkdn6sTnoXb4f9DkgE/HvZcLoKTRT3u" ContinueOnError="{x:Null}" DelayBefore="{x:Null}" DisplayName="CV Screen Scope Select Vendor Info Detials screen" sap:VirtualizedContainerService.HintSize="555,1239" sap2010:WorkflowViewState.IdRef="CVScope_1" RequiresDefaultValues="True" Server="{x:Null}" TimeoutMS="{x:Null}" Version="V1">
+            <p:CVScope ContinueOnError="{x:Null}" DelayBefore="{x:Null}" Server="{x:Null}" ApiKey="OR4QShIpmWMw1y2rN0ubBDjFryjMwQyqmbkdn6sTnoXb4f9DkgE/HvZcLoKTRT3u" DisplayName="CV Screen Scope Select Vendor Info Detials screen" sap:VirtualizedContainerService.HintSize="655,1246" sap2010:WorkflowViewState.IdRef="CVScope_1" Version="V1">
               <p:CVScope.Body>
                 <ActivityAction x:TypeArguments="x:Object">
                   <ActivityAction.Argument>
                     <DelegateInArgument x:TypeArguments="x:Object" Name="CVSessionData" />
                   </ActivityAction.Argument>
                   <Sequence DisplayName="Do" sap2010:WorkflowViewState.IdRef="Sequence_2">
-                    <p:CvElementExistsWithDescriptor ContinueOnError="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" Descriptor="[&quot;Target: Image (31,20,161,28)&quot;]" DesignTimeScaleFactor="1" DisplayName="CV Element Exists - Vendor Information" sap:VirtualizedContainerService.HintSize="521,106" sap2010:WorkflowViewState.IdRef="CvElementExistsWithDescriptor_1" InRegion="{x:Null}" InformativeScreenshot="08204b7ddeeee06949e586327d59664b" OutRegion="{x:Null}" Result="{x:Null}" TimeoutMS="{x:Null}" Version="V1">
+                    <p:CvElementExistsWithDescriptor Descriptor="[&quot;Target: Image (31,20,161,28)&quot;]" DesignTimeScaleFactor="1" DisplayName="CV Element Exists - Vendor Information" sap:VirtualizedContainerService.HintSize="621,106" sap2010:WorkflowViewState.IdRef="CvElementExistsWithDescriptor_1" InformativeScreenshot="08204b7ddeeee06949e586327d59664b" Version="V1">
                       <p:CvElementExistsWithDescriptor.DesignTimeDescriptor>
                         <uc:CvDescriptor>
                           <uc:CvDescriptor.Target>
@@ -98,7 +98,7 @@
                         </uc:CvDescriptor>
                       </p:CvElementExistsWithDescriptor.DesignTimeDescriptor>
                     </p:CvElementExistsWithDescriptor>
-                    <ui:GetValue Value="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Get Text Vendor Info text" sap:VirtualizedContainerService.HintSize="521,106" sap2010:WorkflowViewState.IdRef="GetValue_1">
+                    <ui:GetValue ContinueOnError="{x:Null}" Value="{x:Null}" DisplayName="Get Text Vendor Info text" sap:VirtualizedContainerService.HintSize="621,106" sap2010:WorkflowViewState.IdRef="GetValue_1">
                       <ui:GetValue.Target>
                         <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="eee28c5d0560c4e1b5d8119e7b2f865d" Selector="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div' idx='1' tag='DIV' /&gt;">
                           <ui:Target.TimeoutMS>
@@ -110,7 +110,7 @@
                         </ui:Target>
                       </ui:GetValue.Target>
                     </ui:GetValue>
-                    <If Condition="[VendorInformation.Equals(&quot;Vendor Information&quot;)]" DisplayName="If text is correct then" sap:VirtualizedContainerService.HintSize="621,677" sap2010:WorkflowViewState.IdRef="If_1">
+                    <If Condition="[VendorInformation.Equals(&quot;Vendor Information&quot;)]" DisplayName="If text is correct then" sap:VirtualizedContainerService.HintSize="621,676" sap2010:WorkflowViewState.IdRef="If_1">
                       <If.Then>
                         <Sequence DisplayName="Retreviving Vendor Info" sap:VirtualizedContainerService.HintSize="376,529" sap2010:WorkflowViewState.IdRef="Sequence_4">
                           <Sequence.Variables>
@@ -121,7 +121,7 @@
                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
-                          <ui:GetValue Value="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Get Text Vendor Info" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="GetValue_2">
+                          <ui:GetValue ContinueOnError="{x:Null}" Value="{x:Null}" DisplayName="Get Text Vendor Info" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="GetValue_2">
                             <ui:GetValue.Target>
                               <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="eee28c5d0560c4e1b5d8119e7b2f865d" Selector="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div' idx='1' tag='DIV' /&gt;">
                                 <ui:Target.TimeoutMS>
@@ -171,7 +171,12 @@
                 </uc:CVCache>
               </p:CVScope.DesignTimeCache>
               <p:CVScope.OCREngine>
-                <ActivityFunc x:TypeArguments="sd:Image, scg:IEnumerable(scg:KeyValuePair(sd:Rectangle, x:String))" />
+                <ActivityFunc x:TypeArguments="sd:Image, scg:IEnumerable(scg:KeyValuePair(sd:Rectangle, x:String))">
+                  <ActivityFunc.Argument>
+                    <DelegateInArgument x:TypeArguments="sd:Image" Name="Image" />
+                  </ActivityFunc.Argument>
+                  <ui:MicrosoftOCR FilterRegion="{x:Null}" Language="{x:Null}" Output="{x:Null}" Scale="{x:Null}" Text="{x:Null}" ComputeSkewAngle="False" ExtractWords="True" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="MicrosoftOCR_1" Image="[Image]" Profile="Screen" />
+                </ActivityFunc>
               </p:CVScope.OCREngine>
               <p:CVScope.Target>
                 <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="7bc51d4ab534a5790ba3d6422fcdf2f7" Selector="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div' idx='2' tag='DIV' /&gt;" WaitForReady="INTERACTIVE">
