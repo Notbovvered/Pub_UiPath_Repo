@@ -1613,15 +1613,15 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Joseph\\.nuget\\packages\\": {}
+    "C:\\Users\\jkhas\\.nuget\\packages\\": {}
   },
   "project": {
     "restore": {
       "projectUniqueName": "assignment3-2",
       "projectName": "assignment3-2",
-      "projectPath": "E:\\Uipath Projects on Git\\assignment3-2\\.local",
-      "packagesPath": "C:\\Users\\Joseph\\.nuget\\packages\\",
-      "outputPath": "E:\\Uipath Projects on Git\\assignment3-2\\.local"
+      "projectPath": "C:\\Users\\jkhas\\Documents\\GitHub\\Pub_UiPath_Repo\\assignment3-2\\.local",
+      "packagesPath": "C:\\Users\\jkhas\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\jkhas\\Documents\\GitHub\\Pub_UiPath_Repo\\assignment3-2\\.local"
     },
     "frameworks": {
       "net461": {
